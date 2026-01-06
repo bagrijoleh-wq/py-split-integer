@@ -2,7 +2,7 @@ from app.split_integer import split_integer
 
 
 def test_sum_of_the_parts_should_be_equal_to_value() -> None:
-    assert sum(split_integer(26, 6)) == 26
+    assert split_integer(26, 6) == [4, 4, 4, 4, 5, 5]
 
 
 def test_should_split_into_equal_parts_when_value_divisible_by_parts() -> None:
@@ -22,4 +22,4 @@ def test_should_add_zeros_when_value_is_less_than_number_of_parts() -> None:
 
 
 def test_quantity_elements_should_be_equal_to_number_of_parts() -> None:
-    assert len(split_integer(25, 8)) == 8
+    assert split_integer(25, 8) == [3, 3, 3, 3, 3, 3, 3, 4]
